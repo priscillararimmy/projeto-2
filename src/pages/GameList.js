@@ -38,7 +38,7 @@ export const GameList = () => {
                     <GameCard
                       title={game.title}
                       short_description={game.short_description}
-                      thumbnail={game.thumbnail}
+                      thumb={game.thumbnail}
                     />
                   </Grid>
                 )

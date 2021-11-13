@@ -3,14 +3,15 @@ import { Card, CardContent, CardMedia, Typography, Button, CardActions } from "@
 
 
 
-export const GameCard = ({title, short_description, thumbnail }) => {
+export const GameCard = ({title, short_description, thumb }) => {
     return (
         <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         component="img"
         alt="green iguana"
         height="140"
-        thumbnail={thumbnail}
+        image={thumb} 
+        alt={title}
       />
       <CardContent>
         <Typography >
