@@ -1,13 +1,12 @@
 import React from "react";
+import { DefaultPage } from "../templates/DefaultPage";
 
 export const GameDetails = () => {
     return (
-        
-        <div>
-        Game Details
-        </div>
-    
+        <DefaultPage>Detalhes</DefaultPage>
+
+
     )
-        
-    
+
+
 }

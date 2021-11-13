@@ -3,6 +3,7 @@ import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import { GameCard } from "../Components/Card";
 import { Header } from "../Components/Header";
+import { DefaultPage } from "../templates/DefaultPage";
 
 export const GameList = () => {
 
@@ -25,10 +26,7 @@ export const GameList = () => {
 
   return (
 
-    <>
-      <Header />
-      <Box marginTop={2}>
-        <Container>
+    <DefaultPage>
           <Grid container spacing={2}>
 
             {games.length > 0 ? (
@@ -49,10 +47,8 @@ export const GameList = () => {
               <p> Não há card de jogo disponível</p>
             )}
           </Grid>
-        </Container>
-      </ Box>
-    </>
-
+        
+      </DefaultPage>
   )
 
 }

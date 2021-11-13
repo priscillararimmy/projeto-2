@@ -31,7 +31,7 @@ function Index() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/games" element={<GameList />} />
-          <Route path="/games/:id" element={<GameDetails />} />
+          <Route path="/game" element={<GameDetails />} />
         </Routes>
       </BrowserRouter>
       <CssBaseline />
