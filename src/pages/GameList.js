@@ -1,8 +1,6 @@
 import { Container, Grid } from "@mui/material";
-import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import { GameCard } from "../Components/Card";
-import { Header } from "../Components/Header";
 import { DefaultPage } from "../templates/DefaultPage";
 
 export const GameList = () => {
@@ -33,7 +31,8 @@ export const GameList = () => {
               <> {
                 games.map((game) => (
                   <Grid key={game.id} item>
-                    <GameCard
+                    <GameCard 
+                      id={game.id}
                       title={game.title}
                       short_description={game.short_description}
                       thumb={game.thumbnail}
