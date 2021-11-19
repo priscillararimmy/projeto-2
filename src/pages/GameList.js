@@ -1,4 +1,4 @@
-import { Container, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { GameCard } from "../Components/Card";
 import { DefaultPage } from "../templates/DefaultPage";

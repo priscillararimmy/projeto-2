@@ -13,6 +13,8 @@ export const Home = () => {
         width: "100%",
         height: "100vh",
         background: `url(${BackgroundImage})`,
+        backgroundSize: "100%",
+        backgroundReapeat:"no-reapeat",
         color: "#FFF",
         display: "flex",
         flexDirection: "column",
