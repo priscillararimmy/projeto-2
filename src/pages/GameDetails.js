@@ -2,7 +2,9 @@ import React from "react";
 import { DefaultPage } from "../templates/DefaultPage";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
-import { Button, Chip, CircularProgress, Divider, Grid, Paper, Typography } from "@mui/material";
+import { Chip, CircularProgress, Grid, Paper, Typography } from "@mui/material";
+import { FormGame } from "../Components/FormGame/FormGame";
+import { Slideshow } from "@material-ui/icons";
 
 export const GameDetails = () => {
   const { game } = useParams();
@@ -20,8 +22,7 @@ export const GameDetails = () => {
     fetch(`https://mmo-games.p.rapidapi.com/game?id=${game}`, config)
     .then((response) => {response.json()
     .then((data)=>{setGames(data)})})}, [game]) 
-
-    
+  
     return (
       <DefaultPage>
       <Paper>
@@ -35,27 +36,35 @@ export const GameDetails = () => {
               </Grid>
               <Grid item md={8}>
                 <p>
-                  <Typography variant="h5">{games.title}</Typography>
+                  <Typography variant="h4">{games.title}</Typography>
                 </p>
                 <p>
                   <Typography variant="subtitle1">{games.short_description}</Typography>
                 </p>
-                <Divider />
-                <p>
-                </p>
-                <Divider />
                 <p>
                   <Chip label={games.genre} variant="outlined" />
                 </p>
+                {/* <p>
+                <Grid item md={4}>
+                <img src={games.screenshots} alt={games.title} />
               </Grid>
-              <Button variant="contained" onClick={() => navigate("/games")}>
-                VOLTAR
-              </Button>
+                </p> */}
+              <Slideshow />
+              </Grid>
             </>
           )}
         </Grid>
       </Paper>
-    </DefaultPage>
+      
+      <p></p>
+
+      
+      <FormGame />
+
+      <button type="button" className="btn btn-primary" onClick={() => navigate("/games")}>VOLTAR</button>
+
+      </DefaultPage>
+
 
       
     )

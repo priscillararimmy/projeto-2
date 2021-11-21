@@ -1,13 +1,13 @@
 import { Container } from "@mui/material";
 import { Box } from "@mui/system";
-import { Header } from "../Components/Header";
+import { NavBar } from "../Components/Navbar/Navbar";
 
 
 export const DefaultPage = ({ children }) => {
 
     return (
         <>
-            <Header />
+            <NavBar />
             <Box marginTop={2}>
                 <Container>
                   {children}

@@ -15,19 +15,17 @@ export const Home = () => {
         background: `url(${BackgroundImage})`,
         backgroundSize: "100%",
         backgroundReapeat:"no-reapeat",
-        color: "#FFF",
+        color: "#BA55D3",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
-        fontSize: "2rem",
+        justifyContent: "flex-start",
+        fontSize: "3rem",
       }}
     >
         <Container>
-        <h1> SEJA BEM VINDO AO DEVinMMO</h1>
-        <p>por Priscilla Rarimmy</p>
-        <Button color="primary" variant="contained" size="large" onClick={()=>navigate("/games")}>
-          ENTRAR
-        </Button>
+        <p> SEJA BEM VINDO AO DEVinMMO</p>
+        <h1>por Priscilla Rarimmy</h1>
+        <button type="button" className="btn btn-primary" onClick={()=>navigate("/games")}>ENTRAR</button>
         </Container>
 
 

@@ -1,7 +1,8 @@
-import ReactDOM from "react-dom";
+import React from "react";
 import { CssBaseline, ThemeProvider, createTheme} from "@mui/material";
 import { Route, Routes } from "react-router";
 import { BrowserRouter } from "react-router-dom";
+import 'bootswatch/dist/pulse/bootstrap.min.css'
 
 import { Home } from './pages/Home'
 import { GameList } from "./pages/GameList";
@@ -26,9 +27,11 @@ const theme = createTheme({
   },
 });
 
-function Index() {
-  return (
-    <ThemeProvider theme={theme}>
+const App = () => {
+
+    return (
+        <>
+        <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -39,7 +42,9 @@ function Index() {
       </BrowserRouter>
       <CssBaseline />
     </ThemeProvider>
-  );
+        </>
+    )
+   
 }
 
-ReactDOM.render(<Index />, document.getElementById('root'))
+export default App;
