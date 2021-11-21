@@ -42,7 +42,6 @@ export const GameDetails = () => {
                 </p>
                 <Divider />
                 <p>
-                  <Typography variant="body1">{games.description}</Typography>
                 </p>
                 <Divider />
                 <p>

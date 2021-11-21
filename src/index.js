@@ -6,7 +6,8 @@ import { BrowserRouter } from "react-router-dom";
 import { Home } from './pages/Home'
 import { GameList } from "./pages/GameList";
 import { GameDetails } from "./pages/GameDetails";
-import { LatestNews } from "./pages/LatestNews";
+import { GameNews } from "./pages/GameNews";
+
 
 const theme = createTheme({
   palette: {
@@ -33,7 +34,7 @@ function Index() {
           <Route path="/" element={<Home />} />
           <Route path="/games" element={<GameList />} />
           <Route path="/games/:game" element={<GameDetails />} />
-          <Route path="/games/:latestnews" element={<LatestNews />} />
+          <Route path="/news" element={<GameNews />} />
         </Routes>
       </BrowserRouter>
       <CssBaseline />
