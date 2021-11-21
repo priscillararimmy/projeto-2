@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
 import { Chip, CircularProgress, Grid, Paper, Typography } from "@mui/material";
 import { FormGame } from "../Components/FormGame/FormGame";
-import { Slideshow } from "@material-ui/icons";
+
 
 export const GameDetails = () => {
   const { game } = useParams();
@@ -44,12 +44,6 @@ export const GameDetails = () => {
                 <p>
                   <Chip label={games.genre} variant="outlined" />
                 </p>
-                {/* <p>
-                <Grid item md={4}>
-                <img src={games.screenshots} alt={games.title} />
-              </Grid>
-                </p> */}
-              <Slideshow />
               </Grid>
             </>
           )}

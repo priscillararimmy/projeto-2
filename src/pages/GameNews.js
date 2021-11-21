@@ -46,8 +46,7 @@ console.log(state)
     return (
       
         <DefaultPage>
-          <Grid 
-          >
+          <Grid container xs={12}>
           
              {state.news.length > 0 ? (
                

@@ -3,12 +3,10 @@ import { useFormik } from "formik";
 import * as yup from 'yup';
 import { Button, TextField } from "@mui/material";
 
-const validationSchema = yup.object({
-  email: yup
-    .string('Enter your email')
-    .email('Enter a valid email')
-    .required('Email is required')
-});
+const validationSchema = yup.object().shape({email: yup
+  .string('Enter your email')
+  .email('Enter a valid email')
+  .required('Email is required')});
 
 
 export const FormGame = () => {
@@ -16,7 +14,8 @@ export const FormGame = () => {
   
   const formik = useFormik({
     initialValues: {
-      email: 'foobar@example.com',
+      name: "",
+      email: '',
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
@@ -66,20 +65,7 @@ export const FormGame = () => {
         <p></p>
         <p></p>
       </formik>
-    //   <Box
-    //   component="form"
-    //   sx={{
-    //     '& > :not(style)': { m: 1, width: '25ch' },
-    //   }}
-    //   noValidate
-    //   autoComplete="off"
-    // >
-    //   <TextField id="filled-basic" color="secondary" label="Nome" variant="filled" />
-    //   <TextField required id="outlined-basic" color="secondary" label="Email" variant="outlined" />
-    //   <Button color="primary" variant="contained" fullWidth type="submit">
-    //       Submit
-    //     </Button>
-    // </Box>
+    
       
     
     )
